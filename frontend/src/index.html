@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bo Nexus | Boosters, Trading Cards e Colecionáveis</title>
+  <meta name="description" content="Boosters de Pokémon, One Piece, Yu-Gi-Oh! e outros TCGs com entrega para todo o Brasil.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/frontend/src/styles/style.css">
+</head>
+<body>
+
+  <!-- ========== Header ========== -->
+  <header class="site-header">
+    <div class="container header-top">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+
+      <a href="/" class="logo" aria-label="Card Nexus - página inicial">
+        <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect x="6" y="8" width="34" height="46" rx="4" transform="rotate(-12 23 31)" fill="none" stroke="#e11d2e" stroke-width="3"/>
+          <rect x="14" y="8" width="34" height="46" rx="4" transform="rotate(-4 31 31)" fill="#1a1d27" stroke="#e11d2e" stroke-width="3"/>
+          <rect x="22" y="8" width="34" height="46" rx="4" transform="rotate(5 39 31)" fill="#e11d2e" stroke="#fff" stroke-width="2"/>
+          <path d="M39 22l8 9-8 9-8-9z" fill="#0a0c12"/>
+        </svg>
+        <span class="logo-text">CARD<span>NEXUS</span><small class="logo-tag">Boosters • Trading Cards • Colecionáveis</small></span>
+      </a>
+
+      <form class="search" role="search" action="/busca" method="get">
+        <label for="search-input" class="sr-only">Buscar</label>
+        <input id="search-input" type="search" name="q" placeholder="Buscar produtos, coleções, marcas...">
+        <button type="submit" aria-label="Buscar">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        </button>
+      </form>
+
+      <div class="header-actions">
+        <a href="/favoritos" class="action">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9.2C1.8 7.6 3.7 4.5 7 4.5c2 0 3.5 1.1 5 3 1.5-1.9 3-3 5-3 3.3 0 5.2 3.1 4 6.3C19 15.6 12 20 12 20z"/></svg>
+          <span>Favoritos</span>
+        </a>
+        <a href="/entrar" class="action">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+          <span>Entrar</span>
+        </a>
+        <a href="/carrinho" class="action">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 11h10.1l2-8H6.5"/><circle cx="9" cy="19.5" r="1.3"/><circle cx="17" cy="19.5" r="1.3"/></svg>
+          <span>Carrinho</span>
+          <b class="badge" id="cart-count">0</b>
+        </a>
+      </div>
+    </div>
+
+    <nav class="main-nav" id="main-nav" aria-label="Menu principal">
+      <div class="container">
+        <ul>
+          <li><a href="/" aria-current="page">Início</a></li>
+          <li><a href="/boosters">Boosters</a></li>
+          <li><a href="/acessorios">Acessórios</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== Hero ========== -->
+    <section class="hero" aria-roledescription="carrossel" aria-label="Destaques">
+      <div class="slides" id="slides">
+        <article class="slide">
+          <div class="container">
+            <div class="slide-content">
+              <h1><span class="title-lg">Boosters</span><span class="title-md">dos seus <em>mundos favoritos</em></span></h1>
+              <p>Pokémon, One Piece, Yu-Gi-Oh! e muito mais. Novas coleções, raridades e emoção em cada pacote.</p>
+              <a href="/boosters" class="btn">Ver boosters
+                <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="container">
+            <div class="slide-content">
+              <h2><span class="title-lg">Novidades</span><span class="title-md">chegando <em>toda semana</em></span></h2>
+              <p>Confira os lançamentos mais recentes e garanta os seus antes de esgotar.</p>
+              <a href="/boosters" class="btn">Ver lançamentos
+                <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="container">
+            <div class="slide-content">
+              <h2><span class="title-lg">Proteja</span><span class="title-md">sua <em>coleção</em></span></h2>
+              <p>Sleeves, deckboxes, pastas e tudo que você precisa para guardar suas cartas.</p>
+              <a href="/acessorios" class="btn">Ver acessórios
+                <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide">
+          <div class="container">
+            <div class="slide-content">
+              <h2><span class="title-lg">Entrega</span><span class="title-md">para <em>todo o Brasil</em></span></h2>
+              <p>Compre com segurança e acompanhe seu pedido até a sua porta.</p>
+              <a href="/boosters" class="btn">Comprar agora
+                <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="dots">
+        <div class="container dots-inner" id="dots" role="group" aria-label="Escolher slide"></div>
+      </div>
+    </section>
+
+    <!-- ========== Categorias ========== -->
+    <section class="categories container" aria-label="Categorias">
+      <div class="category-grid">
+        <a href="/boosters/pokemon" class="category-card pokemon">
+          <div class="info"><h3>Pokémon</h3><span>Ver boosters <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        </a>
+        <a href="/boosters/one-piece" class="category-card onepiece">
+          <div class="info"><h3>One Piece</h3><span>Ver boosters <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        </a>
+        <a href="/boosters/yu-gi-oh" class="category-card yugioh">
+          <div class="info"><h3>Yu-Gi-Oh!</h3><span>Ver boosters <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        </a>
+        <a href="/boosters/outros" class="category-card others">
+          <div class="info"><h3>Outros TCGs</h3><span>Ver boosters <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ========== Boosters em destaque ========== -->
+    <section class="featured container" aria-labelledby="featured-title">
+      <div class="section-header">
+        <h2 id="featured-title">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 2s5 4.5 5 9.5a5 5 0 01-1.6 3.7c.2-2-.6-3.5-2-4.7.2 2.2-1.2 3.2-1.9 4.2-.8 1.1-.7 2.6.5 3.6A5.5 5.5 0 016 13.5C6 8 12 2 12 2z"/></svg>
+          Boosters em destaque
+        </h2>
+        <a href="/boosters" class="see-all">Ver todos
+          <svg class="icon" style="width:16px;height:16px" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <!-- Container vazio: o JS injeta os cards aqui.
+           Use a classe .product-card (veja o CSS) com: .favorite, .thumb, .name, .meta, .price, .add-to-cart -->
+      <div class="product-grid" id="featured-boosters"></div>
+    </section>
+  </main>
+
+    <!-- ========== Benefícios ========== -->
+    <section class="benefits" aria-label="Vantagens da loja">
+      <div class="container">
+        <ul>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M2 6h12v10H2zM14 9h4l3 3v4h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg>
+            <div><strong>Entrega para todo o Brasil</strong><span>com rastreamento</span></div>
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+            <div><strong>Compra segura</strong><span>Seus dados protegidos</span></div>
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h4v6H7zM14 10h4M14 14h4"/></svg>
+            <div><strong>Variedades de TCGs</strong><span>As principais coleções</span></div>
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.3"/></svg>
+            <div><strong>Promoções especiais</strong><span>Descontos toda semana</span></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+
+  <script src="/frontend/script.js"></script>
+</body>
+</html>
