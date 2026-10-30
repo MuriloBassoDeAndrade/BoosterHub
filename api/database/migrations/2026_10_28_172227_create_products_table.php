@@ -18,8 +18,6 @@ return new class extends Migration
             $table->string('brand');
             $table->foreignId('characteristics_id')
                 ->constrained();
-            $table->foringId('cart_id')
-                ->constrained();
             $table->decimal('price', 10, 2);
             $table->unsignedInteger('stock')->default(0);
             $table->string('image_url')->nullable();
